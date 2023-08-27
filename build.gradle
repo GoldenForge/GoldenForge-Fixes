@@ -17,12 +17,9 @@ plugins {
 
 apply plugin: 'org.spongepowered.mixin'
 
-group = mod_version
-version = mod_group_id
-
-base {
-    archivesName = mod_id
-}
+version = "${minecraft_version}-${mod_version}"
+group = 'fr.modcraftmc'
+archivesBaseName = "${project.name}"
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -138,6 +135,9 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 dependencies {
@@ -147,6 +147,9 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("curse.maven:environemental-388992:4415514")
+    implementation fg.deobf("curse.maven:blueprint-382216:4442628")
+    implementation fg.deobf("curse.maven:atmospheric-362393:4415516")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

@@ -3,8 +3,12 @@
   "minVersion": "0.8",
   "package": "fr.modcraftmc.goldenforgefixes.mixin",
   "compatibilityLevel": "JAVA_8",
+  "plugin": "fr.modcraftmc.goldenforgefixes.GoldenForgeFixesMixinPlugin",
   "refmap": "GoldenForgeFixes.refmap.json",
   "mixins": [
+    "fixes.environmental.CherryTreeFeatureMixin",
+    "fixes.environmental.WisteriaTreeFeatureMixin",
+    "fixes.atmospheric.YuccaTreeFeatureMixin"
   ],
   "client": [
   ],
