@@ -4,11 +4,14 @@
   "package": "fr.modcraftmc.goldenforgefixes.mixin",
   "compatibilityLevel": "JAVA_8",
   "plugin": "fr.modcraftmc.goldenforgefixes.GoldenForgeFixesMixinPlugin",
-  "refmap": "GoldenForgeFixes.refmap.json",
+  "refmap": "goldenforgefixes.refmap.json",
   "mixins": [
     "fixes.environmental.CherryTreeFeatureMixin",
     "fixes.environmental.WisteriaTreeFeatureMixin",
-    "fixes.atmospheric.YuccaTreeFeatureMixin"
+    "fixes.atmospheric.YuccaTreeFeatureMixin",
+    "fixes.chunky.ForgePlayerMixin",
+    "fixes.chunky.ForgeSenderMixin",
+    "fixes.chunky.ForgeServerMixin"
   ],
   "client": [
   ],
