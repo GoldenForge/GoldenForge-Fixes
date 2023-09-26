@@ -61,7 +61,7 @@ minecraft {
     // However, it must be at "META-INF/accesstransformer.cfg" in the final mod jar to be loaded by Forge.
     // This default location is a best practice to automatically put the file in the right place in the final jar.
     // See https://docs.minecraftforge.net/en/latest/advanced/accesstransformers/ for more information.
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -155,8 +155,11 @@ dependencies {
     implementation fg.deobf("curse.maven:environemental-388992:4415514")
     implementation fg.deobf("curse.maven:blueprint-382216:4442628")
     implementation fg.deobf("curse.maven:atmospheric-362393:4415516")
-    implementation fg.deobf("curse.maven:chunky-485681:3970964")
-    implementation "fr.modcraftmc:goldenforge:1.19.2-43.2.21"
+    implementation fg.deobf("curse.maven:chunky-485681:4591975")
+    implementation fg.deobf("curse.maven:twilight-227639:4389567")
+    implementation fg.deobf("curse.maven:create-328085:4625534")
+    //implementation "fr.modcraftmc:goldenforge:1.20.2-48.0.4"
+    implementation files("goldenforge-1.20.2-48.0.4.jar")
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")

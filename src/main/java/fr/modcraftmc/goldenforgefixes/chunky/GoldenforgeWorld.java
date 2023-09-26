@@ -6,7 +6,7 @@ import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.chunk.ChunkStatus;
 import net.minecraft.world.level.chunk.ImposterProtoChunk;
 import net.minecraft.world.level.chunk.LevelChunk;
-import org.goldenforge.bukkit.Bukkit;
+import org.bukkit.Bukkit;
 import org.popcraft.chunky.platform.ForgeWorld;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,11 +21,15 @@ public class GoldenforgeWorld extends ForgeWorld {
     }
 
     @Override
-    public boolean isChunkGenerated(final int x, final int z) {
+    public CompletableFuture<Boolean> isChunkGenerated(final int x, final int z) {
+        return CompletableFuture.supplyAsync(() -> isChunkGenerated0(x, z));
+    }
+
+    public boolean isChunkGenerated0(final int x, final int z) {
         // Paper start - Fix this method
         if (!Bukkit.isPrimaryThread()) {
             return java.util.concurrent.CompletableFuture.supplyAsync(() -> {
-                return isChunkGenerated(x, z);
+                return isChunkGenerated0(x, z);
             }, world.getChunkSource().mainThreadProcessor).join();
         }
         ChunkAccess chunk = world.getChunkSource().getChunkAtImmediately(x, z);
@@ -39,6 +43,7 @@ public class GoldenforgeWorld extends ForgeWorld {
             throw new RuntimeException(ex);
         }
     }
+
 
     @Override
     public CompletableFuture<Void> getChunkAtAsync(final int x, final int z) {
@@ -57,7 +62,7 @@ public class GoldenforgeWorld extends ForgeWorld {
         java.util.concurrent.CompletableFuture<LevelChunk> ret = new java.util.concurrent.CompletableFuture<>();
 
         io.papermc.paper.chunk.system.ChunkSystem.scheduleChunkLoad(this.world, x, z, true, ChunkStatus.FULL, true, priority, (c) -> {
-            net.minecraft.server.MinecraftServer.getServer().scheduleOnMain(() -> {
+            net.minecraft.server.MinecraftServer.getServer().execute(() -> {
                 net.minecraft.world.level.chunk.LevelChunk chunk = (net.minecraft.world.level.chunk.LevelChunk)c;
                 //if (chunk != null) addTicket(x, z); // Paper
                 ret.complete(chunk == null ? null : chunk);

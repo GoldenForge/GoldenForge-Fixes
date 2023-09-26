@@ -6,12 +6,18 @@
   "plugin": "fr.modcraftmc.goldenforgefixes.GoldenForgeFixesMixinPlugin",
   "refmap": "goldenforgefixes.refmap.json",
   "mixins": [
-    "fixes.environmental.CherryTreeFeatureMixin",
-    "fixes.environmental.WisteriaTreeFeatureMixin",
     "fixes.atmospheric.YuccaTreeFeatureMixin",
     "fixes.chunky.ForgePlayerMixin",
     "fixes.chunky.ForgeSenderMixin",
-    "fixes.chunky.ForgeServerMixin"
+    "fixes.chunky.ForgeServerMixin",
+    "fixes.environmental.CherryTreeFeatureMixin",
+    "fixes.environmental.WisteriaTreeFeatureMixin",
+    "fixes.twilight.OakCanopyTreeFeatureMixin",
+    "fixes.twilight.TFTeleporterMixin",
+    "fixes.twilight.TFMazeAccessor",
+    "fixes.twilight.HedgeMazeComponentMixin",
+    "fixes.twilight.MinotaurMazeComponentMixin",
+    "fixes.create.SeatBlockMixin"
   ],
   "client": [
   ],

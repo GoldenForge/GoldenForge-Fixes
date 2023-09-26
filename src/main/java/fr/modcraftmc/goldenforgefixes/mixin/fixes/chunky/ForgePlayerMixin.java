@@ -20,6 +20,6 @@ public class ForgePlayerMixin {
      */
     @Overwrite
     public World getWorld() {
-        return new GoldenforgeWorld(player.getLevel());
+        return new GoldenforgeWorld(player.serverLevel());
     }
 }

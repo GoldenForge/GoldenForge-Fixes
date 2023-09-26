@@ -31,9 +31,14 @@ public class GoldenForgeFixesMixinPlugin implements IMixinConfigPlugin {
         if (path.startsWith("fixes.atmospheric")) {
             return LoadingModList.get().getModFileById("atmospheric") != null;
         }
-
         if (path.startsWith("fixes.chunky")) {
             return LoadingModList.get().getModFileById("chunky") != null;
+        }
+        if (path.startsWith("fixes.create")) {
+            return LoadingModList.get().getModFileById("create") != null;
+        }
+        if (path.startsWith("fixes.twilight")) {
+            return false;
         }
         return true;
     }
