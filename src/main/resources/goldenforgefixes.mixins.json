@@ -9,6 +9,7 @@
     "fixes.environmental.CherryTreeFeatureMixin",
     "fixes.environmental.WisteriaTreeFeatureMixin",
     "fixes.atmospheric.YuccaTreeFeatureMixin",
+    "fixes.atmospheric.RainforestTreeFeatureMixin",
     "fixes.chunky.ForgePlayerMixin",
     "fixes.chunky.ForgeSenderMixin",
     "fixes.chunky.ForgeServerMixin"
