@@ -156,6 +156,7 @@ dependencies {
     implementation fg.deobf("curse.maven:blueprint-382216:4442628")
     implementation fg.deobf("curse.maven:atmospheric-362393:4415516")
     implementation fg.deobf("curse.maven:chunky-485681:3970964")
+    implementation fg.deobf("curse.maven:ic2-242942:4746971")
     implementation "fr.modcraftmc:goldenforge:1.19.2-43.2.21"
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
