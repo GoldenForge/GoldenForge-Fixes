@@ -40,6 +40,10 @@ public class GoldenForgeFixesMixinPlugin implements IMixinConfigPlugin {
             return LoadingModList.get().getModFileById("ic2") != null;
         }
 
+        if (path.startsWith("fixes.ultimineaddition")) {
+            return LoadingModList.get().getModFileById("ultimine_addition") != null;
+        }
+
         return true;
     }
 

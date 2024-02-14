@@ -13,7 +13,8 @@
     "fixes.chunky.ForgePlayerMixin",
     "fixes.chunky.ForgeSenderMixin",
     "fixes.chunky.ForgeServerMixin",
-    "fixes.ic2.ReactorChamberBlockMixin"
+    "fixes.ic2.ReactorChamberBlockMixin",
+    "fixes.ultimineaddition.ChunkManagerMixin"
   ],
   "client": [
   ],
