@@ -158,7 +158,7 @@ dependencies {
     implementation fg.deobf("curse.maven:chunky-485681:3970964")
     implementation fg.deobf("curse.maven:ic2-242942:4746971")
     implementation fg.deobf("curse.maven:idas-817709:5186085")
-
+    implementation fg.deobf("curse.maven:immersive_petroleum-268250:4842784")
     //implementation fg.deobf("curse.maven:ultimineaddition-733166:5083902")
     implementation fg.deobf(files("ultimine_addition-forge-1.19.2-v1.2.4-release.jar"))
     implementation fg.deobf(files("coolcat_lib-forge-1.19.2-v1.0.3-release.jar"))

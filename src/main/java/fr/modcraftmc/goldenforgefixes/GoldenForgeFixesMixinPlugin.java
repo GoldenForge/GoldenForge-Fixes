@@ -48,6 +48,10 @@ public class GoldenForgeFixesMixinPlugin implements IMixinConfigPlugin {
             return LoadingModList.get().getModFileById("idas") != null;
         }
 
+        if (path.startsWith("immersive_petroleum")) {
+            return LoadingModList.get().getModFileById("immersivepetroleum") != null;
+        }
+
         return true;
     }
 
