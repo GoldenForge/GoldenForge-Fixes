@@ -159,9 +159,12 @@ dependencies {
     implementation fg.deobf("curse.maven:ic2-242942:4746971")
     implementation fg.deobf("curse.maven:idas-817709:5186085")
     implementation fg.deobf("curse.maven:immersive_petroleum-268250:4842784")
-    //implementation fg.deobf("curse.maven:ultimineaddition-733166:5083902")
+    implementation fg.deobf("curse.maven:corgilib-693313:4554112")
+    implementation fg.deobf("curse.maven:alexsmobs-426558:4071154")
+   // implementation fg.deobf("curse.maven:ultimineaddition-733166:5083902")
     implementation fg.deobf(files("ultimine_addition-forge-1.19.2-v1.2.4-release.jar"))
     implementation fg.deobf(files("coolcat_lib-forge-1.19.2-v1.0.3-release.jar"))
+    implementation fg.deobf(files("CorgiLib-forge-1.19.2-1.0.0.34.jar"))
     implementation "fr.modcraftmc:goldenforge:1.19.2-43.3.5"
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

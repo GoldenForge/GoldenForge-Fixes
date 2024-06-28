@@ -15,7 +15,8 @@
     "fixes.chunky.ForgeServerMixin",
     "fixes.ic2.ReactorChamberBlockMixin",
     "fixes.ultimineaddition.ChunkManagerMixin",
-    "fixes.immersive_petroleum.ReservoirRegionDataStorageMixin"
+    "fixes.immersive_petroleum.ReservoirRegionDataStorageMixin",
+    "fixes.idas.StructureSpecificMapsMixin"
   ],
   "client": [
   ],

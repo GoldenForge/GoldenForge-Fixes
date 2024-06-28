@@ -14,7 +14,7 @@ public class StructureSpecificMapsMixin {
 
 
     @Inject(method = "getOffer(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/item/trading/MerchantOffer;",
-    at = @At("HEAD")
+    at = @At("HEAD"), cancellable = true
     )
     public void cancel(ServerLevel level, Entity entity, CallbackInfoReturnable<MerchantOffer> cir) {
         cir.setReturnValue(null);
