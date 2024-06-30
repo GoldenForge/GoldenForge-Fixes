@@ -2,6 +2,7 @@ package fr.modcraftmc.goldenforgefixes.mixin.fixes.alexsmobs;
 
 import com.github.alexthe666.alexsmobs.entity.EntityMurmur;
 import com.github.alexthe666.alexsmobs.entity.EntityMurmurHead;
+import fr.modcraftmc.goldenforgefixes.GoldenForgeFixes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.Level;
@@ -17,8 +18,9 @@ public class EntityMurmurHeadMixin extends Mob {
         super(p_21368_, p_21369_);
     }
 
-    @Inject(method = "<init>(Lcom/github/alexthe666/alexsmobs/entity/EntityMurmur;)V", at = @At("RETURN"))
-    public void inject(EntityMurmur parent, CallbackInfo ci) {
+    @Inject(method = "<init>(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)V", at = @At("RETURN"))
+    public void inject(EntityType type, Level level, CallbackInfo ci) {
+        GoldenForgeFixes.LOGGER.info("Fixing EntityMurmurHead");
         this.moveControl = new CustomMoveController((EntityMurmurHead) (Object) this);
     }
 }
